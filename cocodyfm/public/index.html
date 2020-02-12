@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <link href="https://fonts.googleapis.com/css?family=Lato|Noto+Sans|Quicksand&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="%PUBLIC_URL%/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link href="https://unpkg.com/video.js@7/dist/video-js.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/@videojs/themes@1/dist/fantasy/index.css" rel="stylesheet">
+    
+    <!-- Mes scripts -->
+    <script src="jquery/dist/jquery.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.js"></script>
+    
+    <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+    <script src="https://vjs.zencdn.net/7.6.6/video.js"></script>
+    <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+
+    <script>
+
+      //-----------
+      // horizontal scroll on click
+      //--------------------------------
+
+      var button = document.getElementById('slide');
+      button.onclick = function () {
+        var container = document.getElementById('content');
+        sideScroll(container, 'right', 10, 800, 10);
+      };
+
+      var back = document.getElementById('slideBack');
+      back.onclick = function () {
+        var container = document.getElementById('content');
+        sideScroll(container, 'left', 10, 800, 10);
+      };
+
+
+      function sideScroll(element, direction, speed, distance, step) {
+        scrollAmount = 0;
+        var slideTimer = setInterval(function () {
+          if (direction == 'left') {
+            element.scrollLeft -= step;
+          } else {
+            element.scrollLeft += step;
+          }
+          scrollAmount += step;
+          if (scrollAmount >= distance) {
+            window.clearInterval(slideTimer);
+          }
+        }, speed);
+      }
+
+      //-----------
+      // tabs pills 
+      //--------------------------------
+
+
+
+
+
+      // SCRIPT OWL-CAROUSEL
+      $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        responsiveClass: true,
+        autoplay: true,
+        dots: false,
+        responsive: {
+          0: {
+            items: 1,
+            nav: true
+          },
+          600: {
+            items: 2,
+          },
+          1000: {
+            items: 5,
+          }
+        }
+      })
+
+
+
+    </script>
+    
+    <title>Cocody FM</title>
+
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+
+    <!-- Mes scripts -->
+    <!-- <script src="%PUBLIC_URL%/node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
+    <script src="js/main.js"></script>
+    <script src="js/navbar-scroll.js"></script>
+    
+  </body>
+</html>

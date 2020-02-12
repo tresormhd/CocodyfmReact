@@ -1,0 +1,10 @@
+div[class^="owl-btn-"] {
+    margin-bottom: 15px;
+}
+
+.owl-class-c {
+    position: absolute;
+    right: -10%;
+    top: 20%;
+}
+
