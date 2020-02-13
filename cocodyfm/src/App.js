@@ -3,7 +3,7 @@ import React from 'react';
 import $ from 'jquery'; 
 
 // Route
-import { BrowserRouter as Routeur, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Routeur, Route, Switch , Redirect} from 'react-router-dom';
 
 
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -20,6 +20,7 @@ import Galerie from './compoments/Autres/Galerie';
 import Space from './compoments/Autres/Space';
 import Tchat from './compoments/Autres/Tchat';
 import EvenementCocody from './compoments/Autres/Evenen';
+import NotFound from './compoments/NotFound/NotFound';
 
 
 function App() {
@@ -42,19 +43,25 @@ function App() {
       <Routeur>
           <Navbar />
               <Route exact path="/" component={Presentation} />
-              <Route exact path="/actualite" component={Actuality} />
-              <Route exact path="/events" component={EvenementCocody} />
+              <Route path="/actualite" component={Actuality} />
+              <Route path="/events" component={EvenementCocody} />
               <Switch>
-                  <Route exact path="/playlist" component={Playlist} />
-                  <Route exact path="/artiste" component={PlaylistArticle} />
+                  <Route path="/playlist" component={Playlist} />
+                  <Route path="/artiste" component={PlaylistArticle} />
               </Switch>
               
-              <Route exact path="/showbiz" component={Showbiz} />
-              <Route exact path="/galerie" component={Galerie} />
-              <Route exact path="/space" component={Space} />
-              <Route exact path="/tchat" component={Tchat} />
+              <Route path="/showbiz" component={Showbiz} />
+              <Route path="/galerie" component={Galerie} />
+              <Route path="/space" component={Space} />
+              <Route path="/tchat" component={Tchat} />
+              {/* not found route */}
+              <Route  path="/404" component={NotFound} />
+              <Redirect to='404' />
+
+
           <Footer />
       </Routeur>
+         
   
     );
   }
