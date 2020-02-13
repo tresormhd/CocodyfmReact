@@ -1,10 +1,44 @@
 import React from 'react'
 
-   
 
-const Space = () => {
+let Space = () => {
+    
 return (
+    
 <div>
+<style>
+            {`
+                element.style {
+                }
+                .video-js[tabindex="-1"] {
+                    outline: 0;
+                }
+                .vjs-theme-fantasy {
+                    --vjs-theme-fantasy--primary: #aa0303;
+                    --vjs-theme-fantasy--secondary: #fff;
+                }
+                .video-js {
+                    display: block;
+                    box-sizing: border-box;
+                    color: #fff;
+                    background-color: #000;
+                    padding: 0;
+                    font-size: 10px;
+                    height: 18rem;
+                    width: 100%;
+                    font-weight: 400;
+                    font-style: normal;
+                    font-family: Arial,Helvetica,sans-serif;
+                    word-break: initial;
+                }
+
+                source{
+                    height: 24rem;
+                    width: 40rem;
+                    object-fit: cover;
+                }
+            `}
+    </style>
     <header class="second-header"></header>
 
     <div class="section-space u-marginTop-big u-marginBottom-big">

@@ -19,6 +19,7 @@ import Showbiz from './compoments/Autres/Showbiz';
 import Galerie from './compoments/Autres/Galerie';
 import Space from './compoments/Autres/Space';
 import Tchat from './compoments/Autres/Tchat';
+import EvenementCocody from './compoments/Autres/Evenen';
 
 
 function App() {
@@ -37,12 +38,12 @@ function App() {
     }),
     
     
-    <div className="App">
+    // <div className="App">
       <Routeur>
           <Navbar />
               <Route exact path="/" component={Presentation} />
               <Route exact path="/actualite" component={Actuality} />
-              <Route exact path="/events" component={Event} />
+              <Route exact path="/events" component={EvenementCocody} />
               <Switch>
                   <Route exact path="/playlist" component={Playlist} />
                   <Route exact path="/artiste" component={PlaylistArticle} />
@@ -54,7 +55,7 @@ function App() {
               <Route exact path="/tchat" component={Tchat} />
           <Footer />
       </Routeur>
-    </div>
+  
     );
   }
   

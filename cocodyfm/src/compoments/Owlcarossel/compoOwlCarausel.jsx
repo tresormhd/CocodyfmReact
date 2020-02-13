@@ -11,7 +11,7 @@ const AllCo = props => {
             <OwlCarousel
                 className="owl-theme"
                 loop={true}
-                autoplay={true}
+                // autoplay={true}
                 nav
                 navText ={[`<div class="section-program__control-previous" id="slideBack">
                 <img src="img/icon/arrow.svg" alt="arrow" />

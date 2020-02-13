@@ -1,12 +1,12 @@
 import React from 'react'
 
-const Event = () => {
+let EvenementCocody = () => {
     return (
         <div>
         <header class="second-header"></header>
 
         <div class="section-event">
-            <div class="container ">
+            <div class="container">
                 <div class="event-card mb-5">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 event-card__illustration">
@@ -145,5 +145,5 @@ const Event = () => {
         )
     }
     
-    export default Event;
+    export default EvenementCocody;
     
